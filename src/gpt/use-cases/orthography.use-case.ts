@@ -27,18 +27,18 @@ export const orthographyCheckuseCase = async (
            {
             userScore: number,
             errors: string[], // ['error -> solucion']
-            message: string, // usa emojis y texto para felicitar al usuario o decirle bruto si tiene menos de 50% de acierto
+            message: string, // usa emojis y texto para felicitar al usuario
            }`,
       },
       { role: 'user', content: prompt },
     ],
     model: 'gpt-3.5-turbo',
-    max_tokens: 70,
+    max_tokens: 120,
     temperature: 0.3,
     //Si no es soportado, cambiar modelo o comentar esto.
-    response_format: {
+   /*  response_format: {
       type: 'json_object',
-    },
+    }, */
   });
 
   console.log(completion.choices[0]);
